@@ -1,0 +1,28 @@
+import random
+
+def RollDice(rolls):
+    for i in range(0, rolls):
+        number = random.randint(1, 6)
+        print("---")
+        print("|" + str(number) +"|")
+
+    Menu()
+
+def Menu():
+    print("     ")
+    print("Infoaid Tech : Task-3: ....Dice Roller")
+    print("1. Roll a Dice")
+    print("2. Roll Multiple Dice")
+    print("3. Exit Game/Quit")
+    print()
+    choice = int(input("Enter here: "))
+
+    if (choice == 1):
+       RollDice(1)
+    if (choice == 2):
+       rolls = int(input("How many rolls? "))
+       RollDice(rolls)
+    if (choice == 3):
+       exit();
+
+Menu()
